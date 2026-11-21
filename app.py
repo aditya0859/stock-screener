@@ -31,7 +31,7 @@ else:
         low=df["Low"], close=df["Close"],
     ))
     fig.update_layout(xaxis_rangeslider_visible=False, height=500)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width="Stretch")
 
     st.subheader("Recent prices")
     st.dataframe(df.tail(10).round(2))
